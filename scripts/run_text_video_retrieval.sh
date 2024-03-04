@@ -1,0 +1,1 @@
+horovodrun -np 1 python -m text_video_retrieval.src.tasks.run_video_retrieval --config ./text_video_retrieval/src/configs/msrvtt_retrieval/msrvtt_retrieval_vip_base_32.json  --blob_mount_dir ./blob_mount/msrvtt_retrieval

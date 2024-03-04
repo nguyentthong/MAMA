@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=1 python -m demo_lvlm --video-path ./assets/1QvnvdEOzSM.mp4

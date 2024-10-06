@@ -8,7 +8,7 @@ from video_keyframe_detector.KeyFrameDetector.utils import convert_frame_to_gray
 
 def keyframeDetection(source, dest, Thres, plotMetrics=False, verbose=False):
     
-    keyframePath = dest
+    keyframePath = dest+'/keyFrames'
     imageGridsPath = dest+'/imageGrids'
     csvPath = dest+'/csvFile'
     path2file = csvPath + '/output.csv'
@@ -59,11 +59,14 @@ def keyframeDetection(source, dest, Thres, plotMetrics=False, verbose=False):
 
     cnt = 1
     for x in indices:
-        cv2.imwrite(os.path.join(keyframePath , 'keyframe_'+ str(cnt) +'.jpg'), full_color[x])
+        cv2.imwrite(os.path.join(keyframePath , 'keyframe'+ str(cnt) +'.jpg'), full_color[x])
         cnt +=1
         log_message = 'keyframe ' + str(cnt) + ' happened at ' + str(timeSpans[x]) + ' sec.'
         if(verbose):
             print(log_message)
-
+        with open(path2file, 'w') as csvFile:
+            writer = csv.writer(csvFile)
+            writer.writerows(log_message)
+            csvFile.close()
 
     cv2.destroyAllWindows()

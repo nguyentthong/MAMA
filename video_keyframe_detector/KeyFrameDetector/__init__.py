@@ -1,0 +1,1 @@
+from video_keyframe_detector.KeyFrameDetector import key_frame_detector

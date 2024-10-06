@@ -45,6 +45,10 @@ def convert_frame_to_grayscale(frame):
 def prepare_dirs(keyframePath, imageGridsPath, csvPath):
     if not os.path.exists(keyframePath):
         os.makedirs(keyframePath)
+    if not os.path.exists(imageGridsPath):
+        os.makedirs(imageGridsPath)
+    if not os.path.exists(csvPath):
+        os.makedirs(csvPath)
 
 
 def plot_metrics(indices, lstfrm, lstdiffMag):

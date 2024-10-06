@@ -26,7 +26,7 @@ The resulting video-language model sets a new state-of-the-art on a number of po
 
 <span style="font-variant:small-caps;">MAMA</span> leverages Large Vision-Language Models (LVLM) as to automatically augment video-text training data, and uses these data to fine-tune strong video-language models.
 
-### Requirements
+### Installation
 
 Let's begin from creating and activating a Conda environment an virtual environment. Then install the requirements:
 ```

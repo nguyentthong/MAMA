@@ -36,6 +36,31 @@ MAMA consists of a subtractive angular margin contrastive objective, powered by 
 
 <img src="assets/mama_illustration.png" height=384>
 
+### MAMA Demo
+
+We provide some generated samples by our MAMA’s LVLM-based video-text data generation pipeline:
+
+|                    | <img src="assets/06919917-76bc-4adc-b944-2a722f165513.gif" height=128> | <img src="assets/cf7c12db-1a9e-46d3-96d6-38174bbe373c.gif" height=128> | <img src="assets/ab865129-78fa-47d4-8a50-ff8c5533246f.gif" height=128>
+| :----------------: | :----------------------------------------: | :-------------------------------------: | :--------------------------------------: |
+| MAMA generation   |  C stetches the thread with both hands.    |  C wipes the countertop with a sponge.  |  C takes a photo shot.                   |
+
+Run the narrator demo using Colab (no GPU needed): [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1gHWiEWywIotRivYQTR-8NQ6GJC7sJUe4)               
+or on the web using 🤗 Spaces: [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/thongnguyen5999/mama) (thanks to [@nguyentthong](https://github.com/nguyentthong)!)
+
+Since Colab free account offers very limited RAM, if you'd like to run the demo with a larger model, please run [./demo_mama.py](./demo_mama.py) locally. For more technical details, please refer to Section 3 in our paper.
+
+```bash
+# CPU mode
+python demo_mama.py [--video-path $TEST_VIDEO]
+
+# GPU mode
+python demo_mama.py --cuda [--video-path $TEST_VIDEO]
+```
+
+## MAMA’s Augmented Data
+
+To facilitate future research, we release our augmented data based on the HowTo100M dataset at this link.
+
 ## Citing MAMA
 
 ```bibtex

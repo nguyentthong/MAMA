@@ -34,6 +34,7 @@ See [INSTALL.md](docs/INSTALL.md) to install this code.
 
 MAMA consists of a subtractive angular margin contrastive objective, powered by meta-learning to weigh the important of the training video-text data.
 
+<img src="assets/mama_illustration.png" height=384>
 
 ## Citing MAMA
 

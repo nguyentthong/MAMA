@@ -49,8 +49,7 @@ We provide some generated samples by our MAMA’s LVLM-based video-text data gen
 | :----------------: | :----------------------------------------: | :-------------------------------------: | :--------------------------------------: |
 | MAMA generation   |  C stetches the thread with both hands.    |  C wipes the countertop with a sponge.  |  C takes a photo shot.                   |
 
-Run the narrator demo using Colab (no GPU needed): [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1gHWiEWywIotRivYQTR-8NQ6GJC7sJUe4)               
-or on the web using 🤗 Spaces: [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/thongnguyen5999/mama) (thanks to [@nguyentthong](https://github.com/nguyentthong)!)
+Run the narrator demo using Colab (no GPU needed): [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1gHWiEWywIotRivYQTR-8NQ6GJC7sJUe4) or on the web using 🤗 Spaces: [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/thongnguyen5999/mama) (thanks to [@nguyentthong](https://github.com/nguyentthong)!)
 
 Since Colab free account offers very limited RAM, if you'd like to run the demo with a larger model, please run [./demo_mama.py](./demo_mama.py) locally. For more technical details, please refer to Section 3 in our paper.
 

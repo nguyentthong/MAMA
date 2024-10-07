@@ -12,10 +12,9 @@ ECCV 2024
 
 **Sample Generation:**
 
-| Video | Generation |
-| --------|-------------|
-| <img src="assets/mixkit-pastry-chef-cutting-a-loaf-into-slices-43015-medium.gif" height=128> | so now we're going to slice the bread |
-| <img src="assets/mixkit-pastry-chef-cutting-a-loaf-into-slices-43015-medium.gif" height=128> | so now we're going to slice the bread |
+| Video | Generation 1 | Generation 2 |
+| --------|-------------|--------------|
+| <img src="assets/football_video.gif" height=128> | The video captures a soccer game in progress, showing multiple players on the field, with the focus on the goalie and the soccer ball. | The video captures a soccer game in progress, with multiple shots of the players on the field, showcasing various moments of the match. |
 
 [Try out](#mama-demo) our LVLM-based pipeline to generate text descriptions for your own videos! 
 You can also try out a web demo here: [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/thongnguyen5999/mama)

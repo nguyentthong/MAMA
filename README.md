@@ -22,7 +22,7 @@ You can also try out a web demo here: [![Hugging Face Spaces](https://img.shield
 
 The resulting video-language model sets a new state-of-the-art on a number of popular video tasks!
 
-<img src="assets/spiderplot_results.png" height=384>
+<img src="assets/spiderplot_results.png" height=400>
 
 ## Introduction and installation
 

@@ -47,7 +47,7 @@ MAMA consists of a subtractive angular margin contrastive objective, powered by 
 
 We provide some generated samples by our MAMA’s LVLM-based video-text data generation pipeline:
 
-|                    | <img src="assets/06919917-76bc-4adc-b944-2a722f165513.gif" height=128> | <img src="assets/cf7c12db-1a9e-46d3-96d6-38174bbe373c.gif" height=128> | <img src="assets/ab865129-78fa-47d4-8a50-ff8c5533246f.gif" height=128>
+|                    | <img src="assets/driving_video.mp4" height=128> | <img src="assets/cooking_video.mp4" height=128> | <img src="assets/machine_car_video.mp4" height=128>
 | :----------------: | :----------------------------------------: | :-------------------------------------: | :--------------------------------------: |
 | MAMA generation   |  The video captures the driver's actions and the car's movement in a dynamic and engaging manner, providing a comprehensive view of the driving experience.    |  The video shows a person preparing a meal in multiple steps, with various ingredients and utensils being used.  |  The video shows a step-by-step process of a car being built, starting with the initial design and ending with the final product.|
 

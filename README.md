@@ -17,7 +17,7 @@ ECCV 2024
 | <img src="assets/mixkit-pastry-chef-cutting-a-loaf-into-slices-43015-medium.gif" height=128> | so now we're going to slice the bread |
 | <img src="assets/mixkit-pastry-chef-cutting-a-loaf-into-slices-43015-medium.gif" height=128> | so now we're going to slice the bread |
 
-[Try out](#lvlm-demo) our LVLM-based pipeline to generate text descriptions for your own videos! 
+[Try out](#mama-demo) our LVLM-based pipeline to generate text descriptions for your own videos! 
 You can also try out a web demo here: [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/thongnguyen5999/mama)
 
 The resulting video-language model sets a new state-of-the-art on a number of popular video tasks!

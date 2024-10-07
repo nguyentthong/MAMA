@@ -22,6 +22,8 @@ You can also try out a web demo here: [![Hugging Face Spaces](https://img.shield
 
 The resulting video-language model sets a new state-of-the-art on a number of popular video tasks!
 
+<img src="assets/spiderplot_results.png" height=384>
+
 ## Introduction and installation
 
 <span style="font-variant:small-caps;">MAMA</span> leverages Large Vision-Language Models (LVLM) as to automatically augment video-text training data, and uses these data to fine-tune strong video-language models.

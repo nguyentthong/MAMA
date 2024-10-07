@@ -29,7 +29,7 @@ def extract_keyframes(video_path, num_keyframes=12):
 
     os.makedirs("temp", exist_ok=True)
 
-    keyframeDetection(video_path, "temp", 0.6)
+    keyframeDetection(video_path, "temp", 0.1)
     video_frame_list = sorted(os.listdir(os.path.join("temp", "keyFrames")), key=lambda x: int(x.split('.')[0][8:]))
     os.makedirs(os.path.join("video_frames", video_id), exist_ok=True)
     selected_frame_idx_set = set(np.linspace(1, len(video_frame_list) - 1, num_keyframes).astype(int))
@@ -127,11 +127,17 @@ def eval_model(args, model_name, tokenizer, model, image_processor, context_len)
         model.config
     ).to(model.device, dtype=torch.float16)
 
-    input_ids = (
-        tokenizer_image_token(prompt, tokenizer, IMAGE_TOKEN_INDEX, return_tensors="pt")
-        .unsqueeze(0)
-        .cuda()
-    )
+    if 'cuda' in model.device.type :
+        input_ids = (
+            tokenizer_image_token(prompt, tokenizer, IMAGE_TOKEN_INDEX, return_tensors="pt")
+            .unsqueeze(0)
+            .cuda()
+        )
+    else:
+        input_ids = (
+            tokenizer_image_token(prompt, tokenizer, IMAGE_TOKEN_INDEX, return_tensors="pt")
+            .unsqueeze(0)
+        )
 
     stop_str = conv.sep if conv.sep_style != SeparatorStyle.TWO else conv.sep2
     keywords = [stop_str]
@@ -149,14 +155,19 @@ def eval_model(args, model_name, tokenizer, model, image_processor, context_len)
         )
 
     input_token_len = input_ids.shape[1]
-    n_diff_input_output = (input_ids != output_ids[:, :input_token_len]).sum().item()
-    if n_diff_input_output > 0:
-        print(
-            f"[Warning] {n_diff_input_output} output_ids are not the same as the input_ids"
-        )
-    outputs = tokenizer.batch_decode(
-        output_ids[:, input_token_len:], skip_special_tokens=True
-    )[0]
+    if input_token_len <= output_ids.shape[1]:
+        n_diff_input_output = (input_ids != output_ids[:, :input_token_len]).sum().item()
+        if n_diff_input_output > 0:
+            print(
+                f"[Warning] {n_diff_input_output} output_ids are not the same as the input_ids"
+            )
+        outputs = tokenizer.batch_decode(
+            output_ids[:, input_token_len:], skip_special_tokens=True
+        )[0]
+    else:
+        outputs = tokenizer.batch_decode(
+            output_ids[:, :], skip_special_tokens=True
+        )[0]
     outputs = outputs.strip()
     if outputs.endswith(stop_str):
         outputs = outputs[: -len(stop_str)]
@@ -164,14 +175,19 @@ def eval_model(args, model_name, tokenizer, model, image_processor, context_len)
     return outputs
 
 
-def generate_video_caption(video_path):
+def generate_video_caption(video_path, cuda):
     model_path = "liuhaotian/llava-v1.5-7b"
     model_name = get_model_name_from_path(model_path)
+    if cuda: 
+        device_map = 'cuda'
+    else:
+        device_map = 'cpu'
+
     tokenizer, model, image_processor, context_len = load_pretrained_model(model_path, None, model_name)
     video_id = video_path.split('/')[-1].strip().split('.')[0]
 
     image_file = os.path.join("concatenated_frames", f"{video_id}.jpg")
-    prompt = "In a short paragraph, describe the process in the video."
+    prompt = "In a sentence, describe the process in the video."
 
     args = type('Args', (), {
         "model_path": model_path,
@@ -196,11 +212,12 @@ def clean_files_and_folders():
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--video-path", type=str)
+    parser.add_argument("--cuda", action='store_true', help='use cuda')
     args = parser.parse_args()
 
     extract_keyframes(args.video_path)
     concatenate_frames(args.video_path)
-    generate_video_caption(args.video_path)
+    generate_video_caption(args.video_path, cuda=args.cuda)
     clean_files_and_folders()
     
 

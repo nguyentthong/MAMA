@@ -65,7 +65,7 @@ python demo_mama.py --cuda [--video-path $TEST_VIDEO]
 
 ## MAMA’s Augmented Data
 
-To facilitate future research, we release our augmented data based on the HowTo100M dataset at this link.
+To facilitate future research, we release our augmented data based on the HowTo100M dataset at this link (released later).
 
 ## Citing MAMA
 

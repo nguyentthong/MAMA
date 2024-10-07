@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MAMA</title>
+  <script src="https://kit.fontawesome.com/c444c87c0c.js" crossorigin="anonymous"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+  <script type="text/javascript" async="" src="ga.js"></script>
+  <script type="text/javascript">
+  </script>
+    <style>
+      table.bordered,
+      th.bordered,
+      td.bordered {
+          border: 1px solid black;
+          border-collapse: collapse;
+          padding: 15px;
+      }
+
+      .center {
+          margin-left: auto;
+          margin-right: auto;
+      }
+  </style>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+<script type="text/javascript">
+  function togglevis(elid) {
+      el = document.getElementById(elid);
+      aelid = elid + "a";
+      ael = document.getElementById(aelid);
+      if (el.style.display == 'none') {
+          el.style.display = 'inline-table';
+          ael.innerHTML = "[Hide BibTex]";
+      } else {
+          el.style.display = 'none';
+          ael.innerHTML = "[Show BibTex]";
+      }
+  }
+</script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Chau Philomene One' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=EB Garamond' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Bodoni Moda' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Euphoria Script' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Bodoni Moda' rel='stylesheet'>
+
+<body>
+
+
+<section class="hero">
+  <div class="hero-body" style="background-image: url(static/images/demo_thumbnail.png); background-size: cover; background-position: center; background-repeat: no-repeat; width: 100vw;">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title" style="font-family: Bodoni Moda; color: #563c7e; font-size: 33px; font-weight: bold;">MAMA: A Meta-optimized Angular Margin Contrastive Framework for Video-Language Representation Learning</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block" style="color: white !important; font-family: Bodoni Moda; font-weight: bold;">
+              <a href="https://nguyentthong.github.io/" style="color: white !important; font-family: Bodoni Moda; font-weight: bold;">Thong Nguyen</a><sup style="font-family: Bodoni Moda; font-weight: bold; color:  white;">1</sup>,</span>
+              <span class="author-block" style="color: white !important; font-family: Bodoni Moda; font-weight: bold;">
+                <a href="" style="color: white !important; font-family: Bodoni Moda; font-weight: bold;">Yi Bin</a><sup style="font-family: Bodoni Moda; font-weight: bold; color:  white">1</sup>,
+              </span>
+              <span class="author-block" style="color: white !important; font-family: Bodoni Moda; font-weight: bold;">
+                <a href="" style="color: white !important; font-family: Bodoni Moda; font-weight: bold;">Xiaobao Wu</a><sup style="font-family: Bodoni Moda; font-weight: bold; color:  white">2</sup>,
+              </span>
+              <span class="author-block" style="color: white !important; font-family: Bodoni Moda; font-weight: bold;">
+                <a href="" style="color: white !important; font-family: Bodoni Moda; font-weight: bold;">Xinshuai Dong</a><sup style="font-family: Bodoni Moda; font-weight: bold; color:  white">3</sup>,
+              </span>
+              <span class="author-block" style="color: white !important; font-family: Bodoni Moda; font-weight: bold;">
+              <a href="" style="color: white !important; font-family: Bodoni Moda; font-weight: bold;">Zhiyuan Hu</a><sup style="font-family: Bodoni Moda; font-weight: bold; color:  white;">1</sup>,</span>
+              <span class="author-block" style="color: white !important; font-family: Bodoni Moda; font-weight: bold;">
+                <a href="" style="color: white !important; font-family: Bodoni Moda; font-weight: bold;">Khoi Le</a><sup style="font-family: Bodoni Moda; font-weight: bold; color:  white">4</sup>,
+              </span>
+            <span class="author-block" style="color: white !important; font-family: Bodoni Moda; font-weight: bold;">
+              <a href="" style="color: white !important; font-family: Bodoni Moda; font-weight: bold;">Cong-Duy Nguyen</a><sup style="font-family: Bodoni Moda; font-weight: bold; color:  white">2</sup>,
+            </span>
+            <span class="author-block" style="color: white !important; font-family: Bodoni Moda; font-weight: bold;">
+              <a href="" style="color: white !important; font-family: Bodoni Moda; font-weight: bold;">See-Kiong Ng</a><sup style="font-family: Bodoni Moda; font-weight: bold; color:  white">1</sup>,
+            </span>
+            <span class="author-block" style="color: white !important; font-family: Bodoni Moda; font-weight: bold;">
+              <a href="" style="color: white !important; font-family: Bodoni Moda; font-weight: bold;">Luu Anh Tuan</a><sup style="font-family: Bodoni Moda; font-weight: bold; color:  white">2</sup>,
+            </span>
+          </div> 
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block" style="color: white; font-family: Bodoni Moda; font-weight: bold;"><sup>1</sup>National University of Singapore (NUS),</span>
+            <span class="author-block" style="color: white; font-family: Bodoni Moda; font-weight: bold;"><sup>2</sup>Nanyang Technological University (NTU),</span>
+            <span class="author-block" style="color: white; font-family: Bodoni Moda; font-weight: bold;"><sup>3</sup>Carnegie Mellon University (CMU),</span>
+            <span class="author-block" style="color: white; font-family: Bodoni Moda; font-weight: bold;"><sup>4</sup>VinAI Research</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2407.03788"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2407.03788"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://github.com/nguyentthong/MAMA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <!-- Title Section -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3" style="font-family: Bodoni Moda; color: #563c7e;">Overview</h2>
+      </div>
+    </div>
+  </div>
+  <br>
+
+    <div class="columns is-centered">
+      <div class="column is-three-fifths">
+        Data quality stands at the forefront of deciding the effectiveness of video-language representation learning. However, video-text pairs in previous data typically do not align perfectly with each other, which might lead to video-language representations that do not accurately reflect cross-modal semantics. Moreover, previous data also possess an uneven distribution of concepts, thereby hampering the downstream performance across unpopular subjects. To address these problems, we propose a contrastive objective with a subtractive angular margin to regularize cross-modal representations in their effort to reach perfect similarity. Furthermore, to adapt to the non-uniform concept distribution, we propose a multi-layer perceptron (MLP)-parameterized weighting function that maps loss values to sample weights which enable dynamic adjustment of the model's focus throughout the training. With the training guided by a small amount of unbiased meta-data and augmented by video-text data generated by large vision-language model, we improve video-language representations and achieve superior performances on commonly used video question answering and text-video retrieval datasets.
+      </div>
+    </div>
+
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full">
+            <img src="assets/mama_illustration.png" alt="JPG">
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section class="section">
+  <!-- 标题部分 -->
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3" style="font-family: Bodoni Moda; color: #563c7e;">MAMA's Examples</h2>
+      </div>
+    </div>
+  </div>
+  <hr class="solid">
+
+  <div class="container is-max-desktop" style="color: black;">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <table id="examples" style="width: 100%;">
+          <tr>
+              <td align="center" width="15%"><i class="fa-solid fa-film fa-2x"></i><br />Video</td>
+              <td align="center" width="25%"><img src="assets/driving_video.gif" style="width: 200px;" /><br /></td>
+              <td align="center" width="25%"><img src="assets/cooking_video.gif" style="width: 200px;" /><br /></td>
+              <td align="center" width="25%"><img src="assets/machine_car_video.gif" style="width: 200px;" /><br /></td>
+          </tr>
+          <tr>
+            <td>
+                &nbsp;
+                <!--you just need a space in a row-->
+            </td>
+        </tr>
+          <tr>
+              <td align="center"><img src="assets/mama.png" alt="" width="20%"><br /><font style="font-variant: small-caps">MAMA</font></td>
+              <td align="center" style="width: 20%;">The video captures the driver's actions and the car's movement in a dynamic and engaging manner, providing a comprehensive view of the driving experience.	</td>
+              <td align="center" style="width: 20%;">The video shows a person preparing a meal in multiple steps, with various ingredients and utensils being used.	</td>
+              <td align="center" style="width: 20%;">The video shows a step-by-step process of a car being built, starting with the initial design and ending with the final product.        </td>
+          </tr>
+          <tr>
+            <td>
+                &nbsp;
+                <!--you just need a space in a row-->
+            </td>
+        </tr>
+          <tr>
+            <td align="center" width="15%"><i class="fa-solid fa-film fa-2x"></i><br />Video</td>
+            <td align="center" width="25%"><img src="assets/football_video.gif" style="width: 200px;" /><br /></td>
+            <td align="center" width="25%"><img src="assets/basketball_video.gif" style="width: 200px;" /><br /></td>
+            <td align="center" width="25%"><img src="assets/painting_video.gif" style="width: 200px;" /><br /></td>
+        </tr>
+        <tr>
+          <td>
+              &nbsp;
+              <!--you just need a space in a row-->
+          </td>
+      </tr>
+          <tr>
+            <td align="center"><img src="assets/mama.png" alt="" width="20%"><br /><font style="font-variant: small-caps">MAMA</font></td>
+            <td align="center" style="width: 20%;">The video captures a soccer game in progress, showing multiple players on the field, with the focus on the goalie and the soccer ball.</td>
+            <td align="center" style="width: 20%;">The video captures a basketball game in progress, with multiple players on the court and a crowd of spectators watching the game.</td>
+            <td align="center" style="width: 20%;">The video shows a person painting a room, with multiple shots of the process, including the initial preparation, the painting itself, and the final result. </td>
+        </tr>
+        </table>      
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <!-- 标题部分 -->
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3" style="font-family: Bodoni Moda; color: #563c7e;">Main Results</h2>
+      </div>
+    </div>
+  </div>
+  <hr class="solid">
+  <div class="container is-max-desktop" style="color: black;">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <table id="results" style="margin:auto;">
+          <tr>
+              <td align="center" style="padding-left: 10px; padding-right: 10px;" width="25%">
+                  <img src="assets/spiderplot_results.png" /><br />
+                  (a) State-of-the-art results on popular VideoQA and text-to-video retrieval (TVR) tasks. 
+              </td>
+              <td align="center" style="padding-left: 10px; padding-right: 10px;" width="30%">
+                  <img src="assets/loss_weight.png" /><br />
+                  (b) Our MAMA framework can adaptively assign weights to the loss values of training samples.
+              </td>
+              <td align="center" style="padding-left: 10px; padding-right: 10px;" width="30%">
+                  <img src="assets/topic_freq_improvement.png" /><br />
+                  (c) The less popular the topic of a training sample is, the more improvement MAMA obtains.
+              </td>
+          </tr>
+      </table>
+      </div>
+    </div>
+  </div>
+
+</section>
+<hr class="solid">
+
+<!--BibTex citation -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title has-text-centered" style="font-family: Bodoni Moda; color: #563c7e;">BibTeX</h2>
+    <pre><code>
+      @article{nguyen2024meta,
+        author    = {Nguyen, Thong and Bin, Yi and Wu, Xiaobao and Dong, Xinshuai and Hu, Zhiyuan and Le, Khoi and Nguyen, Cong-Duy and Ng, See-Kiong and Tuan, Luu Anh},
+        title     = {Meta-optimized Angular Margin Contrastive Framework for Video-Language Representation Learning},
+        journal   = {ECCV},
+        year      = {2024},
+      }
+    </code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://arxiv.org/pdf/2407.03788">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/nguyentthong/MAMA" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

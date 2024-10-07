@@ -49,7 +49,7 @@ We provide some generated samples by our MAMA’s LVLM-based video-text data gen
 
 |                    | <img src="assets/06919917-76bc-4adc-b944-2a722f165513.gif" height=128> | <img src="assets/cf7c12db-1a9e-46d3-96d6-38174bbe373c.gif" height=128> | <img src="assets/ab865129-78fa-47d4-8a50-ff8c5533246f.gif" height=128>
 | :----------------: | :----------------------------------------: | :-------------------------------------: | :--------------------------------------: |
-| MAMA generation   |  C stetches the thread with both hands.    |  C wipes the countertop with a sponge.  |  C takes a photo shot.                   |
+| MAMA generation   |  The video captures the driver's actions and the car's movement in a dynamic and engaging manner, providing a comprehensive view of the driving experience.    |  The video shows a person preparing a meal in multiple steps, with various ingredients and utensils being used.  |  The video shows a step-by-step process of a car being built, starting with the initial design and ending with the final product.|
 
 Run the MAMA demo using Colab (no GPU needed): [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1PPeZSROlizqIwXX3eeDEhiOvPx820GbY) or 
 on the web using 🤗 Spaces: [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/thongnguyen5999/mama) (thanks to [@nguyentthong](https://github.com/nguyentthong)!)
